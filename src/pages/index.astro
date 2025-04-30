@@ -1,0 +1,239 @@
+---
+import "../styles/variables.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carne Bovina</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <ul>
+          <li><img src="/public/images/logo-dark.svg" alt="" /></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <button>
+          <p>Quiero ser parte del PTI</p>
+          <img src="/public/images/flecha-white.svg" alt="Flecha" />
+        </button>
+      </nav>
+      <div class="header-content">
+        <h1 class="header-title">Sabor y nutrición que nos une</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="nosotros">
+        <h2>Un Impulso al Futuro de la Carne Bovina</h2>
+        <div class="nosotros-parrafo">
+          <p>
+            En la región de Los Lagos, la ganadería es más que una actividad
+            económica; es una tradición arraigada en nuestras raíces. Pero no
+            nos conformamos con el pasado. Estamos mirando hacia un futuro
+            sostenible y vibrante para la carne bovina de nuestra región.
+          </p>
+          <p>
+            El Programa Territorial Integrado (PTI) de la carne bovina de Los
+            Lagos es el motor de este cambio. Estamos comprometidos en
+            transformar la ganadería, impulsar la calidad de la carne y
+            preservar las tradiciones que nos definen.
+          </p>
+          <p>
+            Únete a nosotros en este viaje hacia un futuro donde la carne bovina
+            de la región de Los Lagos sea sinónimo de calidad, sostenibilidad y
+            orgullo.
+          </p>
+        </div>
+      </section>
+
+      <section class="ser-parte">
+        <div class="overlay"></div>
+        <div class="ser-parte-content">
+          <div class="ser-parte-text">
+            <h3>¿Listo para ser parte de la transformación?</h3>
+            <h3>Descubre cómo puedes participar hoy mismo</h3>
+          </div>
+          <button>Quiero ser parte del PTI</button>
+        </div>
+      </section>
+
+      <section class="dato">
+        <img src="/public/images/datoImg.png" alt="" />
+        <div>
+          <p class="dato-title">¿Cuál es la importancia de la proteína?</p>
+          <p class="dato-text">
+            Lorem ipsum is placeholder text commonly used in the graphic, print,
+            and publishing industries for previewing layouts and visual
+            mockups. Lorem ipsum is placeholder text commonly used in the
+            graphic, print, and publishing industries for previewing layouts and
+            visual mockups.
+          </p>
+          <p>Nombre Mujer</p>
+          <p>Nutricionista</p>
+        </div>
+      </section>
+
+      <section class="colaboradores">
+        <div>
+          <h2>Colaboradores y Alianzas Estratégicas</h2>
+          <img src="/public/images/logo-corfo.png" alt="Logo Corfo" />
+        </div>
+        <div class="colaboradores-parrafo">
+          <p>
+            El PTI de la carne bovina de la región de los Lagos es un esfuerzo
+            conjunto que demuestra cómo la colaboración puede impulsar el cambio
+            positivo en nuestra industria ganadera.
+          </p>
+          <p>
+            En el corazón de este programa se encuentra la Corporación de
+            Fomento de la Producción de la Región de los Lagos, Corfo Los Lagos.
+          </p>
+          <p>
+            Además del compromiso de Corfo Los Lagos, nos enorgullece contar con
+            la colaboración de una serie de colaboradores tanto del sector
+            público como del privado.
+          </p>
+          <p>
+            Estos socios estratégicos trabajan codo a codo con nosotros para
+            determinar las brechas en la industria y encontrar soluciones
+            innovadoras.
+          </p>
+        </div>
+      </section>
+
+      <section class="testimonios">
+        <div class="testimonios-container">
+          <div class="testimonios-section-container">
+            <p class="testimonios-section">Testimonios</p>
+            <div>
+              <p class="testimonios-text">
+                “Historias de éxito que demuestren el impacto positivo del
+                programa.”
+              </p>
+              <p>Bastián Gallardo</p>
+              <p>Ganadero</p>
+            </div>
+          </div>
+          <img src="/public/images/testimonios.png" alt="Video Testimonio" />
+        </div>
+      </section>
+
+      <section class="beneficios">
+        <h2>Nuestros Beneficios</h2>
+        <div class="beneficios-container">
+          <div class="beneficios-card" id="card-1">
+            <img
+              src="/public/images/beneficio-1.png"
+              alt="Icono promoción practicas ganaderas"
+            />
+            <p>Promover prácticas ganaderas responsables.</p>
+          </div>
+          <div class="beneficios-card" id="card-2">
+            <img
+              src="/public/images/beneficio-2.png"
+              alt="Icono elevar calidad carne"
+            />
+            <p>Elevar la calidad de la carne bovina.</p>
+          </div>
+          <div class="beneficios-card" id="card-3">
+            <img
+              src="/public/images/beneficio-3.png"
+              alt="Icono mejorar los ingresos ganaderos"
+            />
+            <p>Mejorar los ingresos de los ganaderos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="blog-items">
+          <p>Blog Completo</p>
+          <p>Noticias</p>
+        </div>
+
+        <div class="blog-cards">
+          <div class="blog-card">
+            <p>Title</p>
+            <button>Leer Más</button>
+          </div>
+          <div class="blog-card">
+            <p>Title</p>
+            <button>Leer Más</button>
+          </div>
+          <div class="blog-card">
+            <p>Title</p>
+            <button>Leer Más</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="unete">
+        <h2>Únete a Nuestra Comunidad Ganadera</h2>
+        <div class="unete-parrafo">
+          <p>
+            Creemos en el poder de trabajar juntos, comunicarnos y construir
+            redes sólidas en la comunidad ganadera de los Lagos. Cuando te unes
+            al PTI, no solo obtienes información y apoyos, sino que también te
+            conviertes en parte de una comunidad dedicada a la excelencia y al
+            crecimiento.
+          </p>
+          <p>
+            Descubre cómo nuestros talleres, recursos y apoyos pueden impulsar
+            tu éxito ganadero. Únete a nosotros y aprovecha estas valiosas
+            oportunidades para aprender, crecer y colaborar.
+          </p>
+          <button>
+            Únete a la Comunidad
+            <img src="/public/images/flecha-white.svg" alt="Flecha" />
+          </button>
+        </div>
+      </section>
+
+      <section class="footer">
+        <img src="/public/images/logo-white.svg" alt="" />
+        <div class="footer-text">
+          <ul>
+            <p>Contacto</p>
+            <li>
+              <img src="/public/images/email-icon.svg" alt="Icono Email" />
+              <a href="#">contacto@carnebovinaloslagos.cl</a>
+            </li>
+            <li>
+              <img src="/public/images/email-icon.svg" alt="Icono Email" />
+              <a href="">gestor.pticarneloslagos@ufrontera.cl</a>
+            </li>
+            <li>
+              <img src="/public/images/email-icon.svg" alt="Icono Email" />
+              <a href="">comunicaciones.pticarne@gmail.com</a>
+            </li>
+            <li>
+              <img src="/public/images/call-icon.svg" alt="Icono Llamada" />
+              <a href=""> +56 9 4908 3080</a>
+            </li>
+          </ul>
+          <ul>
+            <p>Redes sociales</p>
+            <li>
+              <img src="/public/images/facebook.svg" alt="Icono Facebook" />
+              <img src="/public/images/instagram.svg" alt="Icono Instagram" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
