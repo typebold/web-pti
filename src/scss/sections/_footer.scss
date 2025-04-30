@@ -1,0 +1,76 @@
+@use "../tools/mixin" as *;
+
+.c-footer {
+    background-color: var(--texto-principal);
+    color: white;
+    
+    &__container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        @include lg() {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        max-width: 200px;
+
+        @include lg() {
+            margin: 0 auto;
+        }
+    }
+
+    &__content {
+        ul {
+            list-style: none;
+            align-items: center;
+            padding-inline-start: 0;
+            margin-bottom: 46px;
+
+            p {
+                font-weight: 800;
+                margin-bottom: 20px;
+            }
+
+            @include lg() {
+                margin-bottom: 30px;
+            }
+        }
+
+        li {
+            display: flex;
+            gap: 28px;
+            margin-bottom: 16px;
+            align-items: center;
+
+            @include lg() {
+                justify-content: center;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 20px;
+
+        @include lg() {
+            justify-content: center;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+}

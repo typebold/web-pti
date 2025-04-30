@@ -1,0 +1,71 @@
+@use "../tools/mixin" as *;
+
+.c-testimonios {
+    background-color: #F2F2F2;
+
+    &__container {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        padding: 39px;
+        border-radius: 33px;
+
+        @include lg() {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 25px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include lg() {
+            gap: 20px;
+        }
+    }
+
+    &__tag {
+        margin-right: 51px;
+        border: 2px solid var(--texto-principal);
+        color: var(--texto-principal);
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px 15px;
+
+        @include lg() {
+            margin-right: 0;
+            padding: 15px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        @include lg() {
+            font-size: 20px;
+        }
+    }
+
+    &__author {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    &__role {
+        color: var(--texto-secundario);
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+
+        @include lg() {
+            order: -1;
+        }
+    }
+} 

@@ -1,0 +1,19 @@
+@use "tools/mixin";
+
+@use "sections/header";
+@use "sections/advisor";
+@use "sections/cta";
+@use "sections/dato";
+@use "sections/colaboradores";
+@use "sections/testimonios";
+@use "sections/beneficios";
+@use "sections/blog";
+@use "sections/unete";
+@use "sections/footer";
+
+@forward "./sections/about";
+@forward "./sections/footer";
+@forward "./sections/items";
+@forward "./sections/videos";
+
+@forward "./objects/objects";

@@ -1,0 +1,50 @@
+@use "../tools/mixin" as *;
+
+.c-dato {
+    &__container {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 50% 50%;
+        background-color: var(--color-terciario);
+
+        @include lg() {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    &__content {
+        padding: 50px;
+
+        @include lg() {
+            padding: 30px;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 20px;
+
+        @include lg() {
+            font-size: 26px;
+        }
+    }
+    &__text {
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        @include lg() {
+            font-size: 20px;
+        }
+    }
+    &__author {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    &__role {
+        color: var(--texto-secundario);
+    }
+} 

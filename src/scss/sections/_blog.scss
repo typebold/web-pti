@@ -1,0 +1,108 @@
+@use "../tools/mixin" as *;
+
+.c-blog {
+    background-color: #F2F2F2;
+
+    &__nav {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__nav-item {
+        cursor: pointer;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 10px;
+        
+        &--active {
+            background-color: var(--color-terciario);
+            color: var(--texto-principal);
+        }
+
+        &:not(.c-blog__nav-item--active) {
+            border: 1px solid var(--texto-principal);
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+
+        @include lg() {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+
+    &__card {
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid #E5E5E5;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        
+        @include lg() {
+            text-align: left;
+        }
+    }
+
+    &__tag {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 5px;
+        background-color: white;
+        border: 1px solid var(--texto-principal);
+        color: var(--texto-principal);
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--texto-principal);
+        margin: 0;
+
+        @include lg() {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        color: var(--texto-secundario);
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    &__button {
+        background-color: var(--texto-principal);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        align-self: flex-start;
+        font-weight: 500;
+
+        @include lg() {
+            width: auto;
+        }
+    }
+}

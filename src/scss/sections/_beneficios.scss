@@ -1,0 +1,57 @@
+@use "../tools/mixin" as *;
+
+.c-beneficios {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(1rem, 2vw, 2rem);
+        margin-top: 40px;
+
+        @include lg() {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+
+        @include lg() {
+            padding: 1.5rem;
+        }
+
+        @include sm() {
+            padding: 1rem;
+        }
+
+        &--1 {
+            background-color: rgba(44, 105, 111, 0.2);
+            color: var(--texto-principal);
+        }
+
+        &--2 {
+            background-color: rgba(169, 195, 130, 0.2);
+            color: var(--texto-cuaternario);
+        }
+
+        &--3 {
+            background-color: rgba(213, 220, 86, 0.2);
+            color: var(--texto-terciario);
+        }
+    }
+
+    &__icon {
+        width: 80px;
+        height: auto;
+        margin-bottom: 1rem;
+
+        @include lg() {
+            width: 70px;
+        }
+
+        @include sm() {
+            width: 60px;
+        }
+    }
+} 
