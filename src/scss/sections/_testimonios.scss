@@ -9,6 +9,7 @@
         grid-template-columns: 20% 80%;
         padding: 39px;
         border-radius: 33px;
+        gap: 20px;
 
         @include lg() {
             grid-template-columns: 1fr;

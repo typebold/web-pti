@@ -16,9 +16,12 @@
         padding: 2rem;
         border-radius: 10px;
         text-align: center;
+        font-weight: 800;
+        text-align: left;
 
         @include lg() {
             padding: 1.5rem;
+            text-align: center;
         }
 
         @include sm() {
@@ -42,16 +45,16 @@
     }
 
     &__icon {
-        width: 80px;
+        width: 50px;
         height: auto;
         margin-bottom: 1rem;
 
         @include lg() {
-            width: 70px;
+            margin-bottom: 0;
         }
 
         @include sm() {
-            width: 60px;
+            width: 40px;
         }
     }
 } 

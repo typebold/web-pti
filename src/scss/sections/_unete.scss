@@ -16,8 +16,7 @@
     &__content {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-
+        
         @include lg() {
             align-items: center;
         }
@@ -35,6 +34,7 @@
         cursor: pointer;
         align-items: center;
         width: fit-content;
+        font-weight: 800;
 
         @include lg() {
             width: 100%;
