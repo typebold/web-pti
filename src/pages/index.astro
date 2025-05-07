@@ -1,0 +1,758 @@
+---
+import "../styles/variables.css";
+import { Image } from "astro:assets";
+import logoWhite from "../assets/images/logo-white.svg?url";
+import flechaWhite from "../assets/images/flecha-white.svg?url";
+import datoImg from "../assets/images/nutricionista.jpg";
+import logoCorfo from "../assets/images/logo-corfo.png";
+import beneficio1 from "../assets/images/beneficio-1.svg?url";
+import beneficio2 from "../assets/images/beneficio-2.svg?url";
+import beneficio3 from "../assets/images/beneficio-3.svg?url";
+import noticia1 from "../assets/images/noticia-1.jpg";
+import noticia2 from "../assets/images/noticia-2.jpg";
+import noticia3 from "../assets/images/noticia-3.jpg";
+import noticia4 from "../assets/images/noticia-4.jpg";
+import noticia5 from "../assets/images/noticia-5.png";
+import noticia6 from "../assets/images/noticia-6.png";
+
+// import blog2 from '../assets/images/blog-2.jpg';
+// import blog3 from '../assets/images/blog-3.jpg';
+import emailIcon from "../assets/images/email-icon.svg?url";
+import callIcon from "../assets/images/call-icon.svg?url";
+import facebook from "../assets/images/facebook.svg?url";
+import instagram from "../assets/images/instagram.svg?url";
+import instagramBlack from "../assets/images/instagram-black.svg?url";
+
+import { Swiper } from "swiper";
+import "swiper/swiper-bundle.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Carne Bovina - Región de Los Lagos</title>
+    <meta
+      name="description"
+      content="Únete al Programa Territorial Integrado (PTI) que Transforma la Ganadería, Impulsa la Calidad y Preserva Nuestras Tradiciones"
+    />
+    <meta name="keywords" content="Carne Bovina Región de Los Lagos" />
+    <link
+      rel="shortcut icon"
+      href="./public/images/logo.ico"
+      type="image/x-icon"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Carne Bovina Los Lagos</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMJV1RGD9E"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TMJV1RGD9E");
+    </script>
+  </head>
+  <body>
+    <header class="c-header">
+      <div class="o-container">
+        <nav class="c-header__navbar">
+          <ul>
+            <li><img src={logoWhite} alt="Logo" width="100" height="100" /></li>
+            <li><a href="#ahas">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#blog">Noticias</a></li>
+          </ul>
+          <button
+            onclick="window.open('./form', '_blank')"
+            class="c-header__button"
+          >
+            Quiero ser parte del PTI
+            <img src={flechaWhite} alt="Flecha" width="14" height="14" />
+          </button>
+        </nav>
+        <div class="c-header__content">
+          <h1 class="c-header__title">Sabor y nutrición que nos une</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="c-advisor" id="nosotros">
+        <div class="o-container">
+          <div class="c-advisor__container">
+            <h2>Un Impulso al Futuro de la Carne Bovina</h2>
+            <div class="c-advisor__content">
+              <p>
+                En la región de Los Lagos, la ganadería es más que una actividad
+                económica; es una tradición arraigada en nuestras raíces. Pero
+                no nos conformamos con el pasado. Estamos mirando hacia un
+                futuro sostenible y vibrante para la carne bovina de nuestra
+                región.
+              </p>
+              <p>
+                El Programa Territorial Integrado (PTI) de la carne bovina de
+                Los Lagos es el motor de este cambio. Estamos comprometidos en
+                transformar la ganadería, impulsar la calidad de la carne y
+                preservar las tradiciones que nos definen.
+              </p>
+              <p>
+                Únete a nosotros en este viaje hacia un futuro donde la carne
+                bovina de la región de Los Lagos sea sinónimo de calidad,
+                sostenibilidad y orgullo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-cta">
+        <div class="o-container">
+          <div class="c-cta__container">
+            <div class="c-cta__content">
+              <div class="c-cta__text">
+                <h3>¿Listo para ser parte de la transformación?</h3>
+                <h3>Descubre cómo puedes participar hoy mismo</h3>
+              </div>
+              <button
+                onclick="window.open('./form', '_blank')"
+                class="c-cta__button">Quiero ser parte del PTI</button
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-dato">
+        <div class="o-container">
+          <div class="c-dato__container">
+            <Image
+              class="c-dato__image"
+              src={datoImg}
+              alt="Imagen informativa"
+            />
+            <div class="c-dato__content">
+              <p class="c-dato__title">
+                CARNE BOVINA, APORTE A LA NUTRICIÓN HUMANA
+              </p>
+              <p class="c-dato__text">
+                La domesticación del vacuno se remonta a aproximadamente el año
+                5.000 a.c. esto permitió un suministro más estable de carne,
+                pasando ésta a ser alimento base en diversas culturas. <br />
+                La carne de vacuno proporciona a nuestro organismo gran cantidad
+                de nutrientes. Tiene un contenido en macronutrientes diferente en
+                función de la edad de sacrificio y de la pieza de consumo. Destaca
+                su contenido en proteínas de alto valor biológico, siendo éstas entre
+                el 20 – 25 % de su composición, aportando alrededor de un 40% de
+                aminoácidos esenciales, es decir, que el organismo no puede sintetizar
+                y por ello deben ser aportados por la alimentación.
+                <br />
+                <br />
+                También aporta grasas, el contenido y la calidad de éstas variable
+                acorde a la edad, sexo, alimentación y zona de la canal del animal.
+                Las partes más magras tienen alrededor de 6 g de grasa por 100 gramos
+                de alimento completo, mientras que las de más contenido lipídico
+                pueden superar los 20 g por 100 gramos de alimento. En relación a
+                las vitaminas, la carne de vacuno destaca por el contenido de complejo
+                B, entre otras vitaminas, además, es una muy buena fuente de hierro
+                hemo, este mineral juega un papel muy importante en la prevención
+                de la anemia ferropénica. También destaca su aporte de zinc de elevada
+                biodisponibilidad y otros minerales como cobre, magnesio, selenio,
+                fósforo, cromo y níquel. Dependiendo de la edad del animal y de la
+                pieza del animal, el valor nutricional puede variar, sin embargo,
+                es importante, elegir carnes de animales criados apropiadamente,
+                para tener la mejor calidad posible de carne de vacuno en nuestras
+                cocinas.
+              </p>
+              <p class="c-dato__author">Stephanie Riedel Rosas.</p>
+              <p class="c-dato__role">Nutricionista</p>
+              <a
+                href="https://www.instagram.com/activatunutricion"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={instagramBlack}
+                  alt="Logo Instagram"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-colaboradores">
+        <div class="o-container">
+          <div class="c-colaboradores__container">
+            <div>
+              <h2>Colaboradores y Alianzas Estratégicas</h2>
+              <Image
+                class="c-colaboradores__logo"
+                src={logoCorfo}
+                alt="Logo Corfo"
+              />
+            </div>
+            <div class="c-colaboradores__content">
+              <p>
+                El PTI de la carne bovina de la región de los Lagos es un
+                esfuerzo conjunto que demuestra cómo la colaboración puede
+                impulsar el cambio positivo en nuestra industria ganadera.
+              </p>
+              <p>
+                En el corazón de este programa se encuentra la Corporación de
+                Fomento de la Producción de la Región de los Lagos, Corfo Los
+                Lagos.
+              </p>
+              <p>
+                Además del compromiso de Corfo Los Lagos, nos enorgullece contar
+                con la colaboración de una serie de colaboradores tanto del
+                sector público como del privado.
+              </p>
+              <p>
+                Estos socios estratégicos trabajan codo a codo con nosotros para
+                determinar las brechas en la industria y encontrar soluciones
+                innovadoras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-testimonios" id="testimonios">
+        <div class="c-testimonios__container">
+          <!-- Flechas dentro de .swiper -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- PRIMER VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391387?badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="Spot 2 GC Grande"
+                        class="c-testimonios__wrapper-videos"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SEGUNDO VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">
+                            "Historias de éxito que demuestren el impacto
+                            positivo del programa."
+                          </p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391369?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="Spot 1 Petra"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TERCER VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391403?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="Spot 3_1 GC Grande"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CUARTO VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391434?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="Spot 4_1 GC grande"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- QUINTO VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391458?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="spot 5_1 Gc Grande"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SEXTO VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391506?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="spot 7_1 niños GC grande"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SEPTIMO VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391525?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="spot 8 GC Grande"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+
+              <!-- OCTAVO VIDEO -->
+              <div class="swiper-slide">
+                <div class="c-testimonios__container">
+                  <div class="c-testimonios__subcontainer">
+                    <div class="c-testimonios__content">
+                      <div class="c-testimonios__container1">
+                        <div>
+                          <p class="c-testimonios__tag">Testimonios</p>
+                        </div>
+                        <div class="c-testimonios__container1-text">
+                          <p class="c-testimonios__text">Titulo por agregar</p>
+                          <p class="c-testimonios__author">Bastián Gallardo</p>
+                          <p class="c-testimonios__role">Ganadero</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe
+                        src="https://player.vimeo.com/video/1080391484?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        title="spot 6_1 GC Grande"></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"
+                    ></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-beneficios">
+        <div class="o-container">
+          <h2>Nuestros Beneficios</h2>
+          <div class="c-beneficios__container">
+            <div class="c-beneficios__card c-beneficios__card--1">
+              <img
+                class="c-beneficios__icon"
+                src={beneficio1}
+                alt="Icono promoción practicas ganaderas"
+              />
+              <p>Promover prácticas ganaderas responsables.</p>
+            </div>
+            <div class="c-beneficios__card c-beneficios__card--2">
+              <img
+                class="c-beneficios__icon"
+                src={beneficio2}
+                alt="Icono elevar calidad carne"
+              />
+              <p>Elevar la calidad de la carne bovina.</p>
+            </div>
+            <div class="c-beneficios__card c-beneficios__card--3">
+              <img
+                class="c-beneficios__icon"
+                src={beneficio3}
+                alt="Icono mejorar los ingresos ganaderos"
+              />
+              <p>Mejorar los ingresos de los ganaderos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-blog" id="blog">
+        <div class="o-container">
+          <div class="c-blog__nav">
+            <!-- <p class="c-blog__nav-item c-blog__nav-item--active">
+              Blog Completo
+            </p> -->
+            <p class="c-blog__nav-item">Noticias</p>
+          </div>
+
+          <div class="c-blog__container">
+            <div class="c-blog__card">
+              <span class="c-blog__tag">Noticia</span>
+              <div class="c-blog__content">
+                <Image class="c-blog__image" src={noticia1} alt="Noticia 1" />
+                <p class="c-blog__text">
+                  Participación del PTI de la Carne Bovina Los Lagos en Food &
+                  Service 2024 impulsa alianzas y sostenibilidad
+                </p>
+                <a
+                  href="https://www.australosorno.cl/impresa/2024/10/07/full/campo-sureno/7/ "
+                  target="_blank"
+                >
+                  <button class="c-blog__button">Leer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="c-blog__card">
+              <span class="c-blog__tag">Noticia</span>
+              <div class="c-blog__content">
+                <Image class="c-blog__image" src={noticia2} alt="Noticia 2" />
+                <p class="c-blog__text">
+                  Analizan el potencial y promoción de consumo de la carne
+                  bovina en Los Lagos
+                </p>
+                <a
+                  href="https://www.australosorno.cl/impresa/2024/09/26/full/cuerpo-principal/6/"
+                  target="_blank"
+                >
+                  <button class="c-blog__button">Leer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="c-blog__card">
+              <span class="c-blog__tag">Noticia</span>
+              <div class="c-blog__content">
+                <Image class="c-blog__image" src={noticia3} alt="Noticia 3" />
+                <p class="c-blog__text">
+                  Los vaivenes que remecen a la carne bovina
+                </p>
+                <a
+                  href="https://digital.elmercurio.com/2025/02/17/EMSU/284GVRNL#zoom=page-width"
+                  target="_blank"
+                >
+                  <button class="c-blog__button">Leer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="c-blog__card">
+              <span class="c-blog__tag">Noticia</span>
+              <div class="c-blog__content">
+                <Image class="c-blog__image" src={noticia4} alt="Noticia 4" />
+                <p class="c-blog__text">
+                  Sector ganadero refuerza estrategias para fortalecer
+                  producción y comercialización de carne bovina en Los Lagos
+                </p>
+                <a
+                  href="https://www.australosorno.cl/impresa/2025/03/10/full/campo-sureno/8/"
+                  target="_blank"
+                >
+                  <button class="c-blog__button">Leer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="c-blog__card">
+              <span class="c-blog__tag">Noticia</span>
+              <div class="c-blog__content">
+                <Image class="c-blog__image" src={noticia5} alt="Noticia 5" />
+                <p class="c-blog__text">
+                  Los Lagos fortalece su liderazgo en la producción de carne
+                  bovina de alta calidad
+                </p>
+                <a
+                  href="https://eha.cl/edicion/edicion-27-11-2024#"
+                  target="_blank"
+                >
+                  <button class="c-blog__button">Leer más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="c-blog__card">
+              <span class="c-blog__tag">Noticia</span>
+              <div class="c-blog__content">
+                <Image class="c-blog__image" src={noticia6} alt="Noticia 6" />
+                <p class="c-blog__text">
+                  Seminario destaca el rol femenino en la sostenibilidad de la
+                  ganadería en Los Lagos
+                </p>
+                <a
+                  href="https://www.portalagrochile.cl/2025/03/28/seminario-destaca-el-rol-femenino-en-la-sostenibilidad-de-la-ganaderia-en-los-lagos/"
+                  target="_blank"
+                >
+                  <button class="c-blog__button">Leer más</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="c-unete">
+      <div class="o-container">
+        <div class="c-unete__container">
+          <h2>Únete a Nuestra Comunidad Ganadera</h2>
+          <div class="c-unete__content">
+            <p>
+              Creemos en el poder de trabajar juntos, comunicarnos y construir
+              redes sólidas en la comunidad ganadera de los Lagos. Cuando te
+              unes al PTI, no solo obtienes información y apoyos, sino que
+              también te conviertes en parte de una comunidad dedicada a la
+              excelencia y al crecimiento.
+            </p>
+            <p>
+              Descubre cómo nuestros talleres, recursos y apoyos pueden impulsar
+              tu éxito ganadero. Únete a nosotros y aprovecha estas valiosas
+              oportunidades para aprender, crecer y colaborar.
+            </p>
+            <button
+              onclick="window.open('./form', '_blank')"
+              class="c-unete__button"
+            >
+              Únete a la Comunidad
+              <img src={flechaWhite} alt="Flecha" width="14" height="14" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-footer">
+      <div class="o-container">
+        <div class="c-footer__container">
+          <div>
+            <img src={logoWhite} alt="Logo" width="100" height="100" />
+          </div>
+          <div class="c-footer__content">
+            <ul>
+              <p>Contacto</p>
+              <li>
+                <img src={emailIcon} alt="Icono Email" width="24" height="24" />
+                <a href="#">contacto@carnebovinaloslagos.cl</a>
+              </li>
+              <li>
+                <img src={emailIcon} alt="Icono Email" width="24" height="24" />
+                <a href="">gestor.pticarneloslagos@ufrontera.cl</a>
+              </li>
+              <li>
+                <img src={emailIcon} alt="Icono Email" width="24" height="24" />
+                <a href="">comunicaciones.pticarne@gmail.com</a>
+              </li>
+              <li>
+                <img
+                  src={callIcon}
+                  alt="Icono Llamada"
+                  width="24"
+                  height="24"
+                />
+                <!-- <Image src={callIcon} alt="Icono Llamada" /> -->
+                <a href=""> +56 9 4908 3080</a>
+              </li>
+            </ul>
+            <ul>
+              <p>Redes sociales</p>
+              <li class="c-footer__social">
+                <img
+                  src={facebook}
+                  alt="Icono Facebook"
+                  width="24"
+                  height="24"
+                />
+                <a
+                  href="https://www.instagram.com/pti_cbloslagos/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={instagram}
+                    alt="Icono Instagram"
+                    width="24"
+                    height="24"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      import Swiper from "swiper/bundle";
+
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
+
+<style lang="scss" is:global>
+  @use "../scss/main.scss" as *;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+  }
+
+  main section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+</style>

@@ -1,0 +1,46 @@
+@use "../tools/mixin" as *;
+
+.c-unete {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: clamp(1rem, 2vw, 2rem);
+        color: var(--texto-principal);
+
+        @include lg() {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+            width: 95%;
+        @include lg() {
+            align-items: center;
+        }
+    }
+
+    &__button {
+        margin-top: 30px;
+        background-color: var(--texto-principal);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 15px 30px;
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+        align-items: center;
+        width: fit-content;
+        font-weight: 800;
+
+        @include lg() {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+} 

@@ -1,0 +1,44 @@
+@use "../tools/mixin" as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 40px auto;
+                        
+        // @media (max-width: 768px) {
+        //     width: 95%;
+        // }
+
+    &__container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        text-align: center;
+
+        img {
+            padding: 20px;
+        }
+    }
+
+    &__container {
+        width: 50%;
+
+        @include md() {
+            width: 70%;
+        }
+
+        @include lg(){
+            width: 80%;
+        }  
+
+        button {
+            background-color: var(--texto-principal);
+            color: white;
+        }
+    }
+
+
+}

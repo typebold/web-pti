@@ -1,0 +1,88 @@
+@use "../tools/mixin" as *;
+
+.c-header{
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background-image: linear-gradient(-90deg, rgba(19, 40, 53, 0) 0%, rgba(19, 40, 53, 0.5) 100%), url('../assets/images/header.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    &__navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // background-color: rgba(255, 254, 225, 0.15);
+        // backdrop-filter: blur(5px);
+        padding: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include lg(){
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding-left: 51px;
+            @include lg(){
+                padding-left: 0px;
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+        li {
+            margin: 0 20px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+
+    &__logo{
+        width: 80px;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    &__button{
+        margin-right: 51px;
+        background-color: #132B35;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        @include lg(){
+            margin-left: 15px;
+        }
+    }
+    &__content{
+        width: 60%;
+        margin-bottom: 50px;
+        @include lg(){
+            width: 90%;
+        }
+    }
+    &__title{
+        font-size: 60px;
+        color: white;
+        @include lg(){
+            font-size: 40px;
+        }
+    }
+}

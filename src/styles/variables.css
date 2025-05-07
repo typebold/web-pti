@@ -1,0 +1,499 @@
+:root {
+    --color-principal: #2C696F;
+    --color-secundario: #FFFFE1;
+    --color-terciario: #D5DC56;
+    --color-cuaternario: #A9C382;
+
+    --texto-principal: #1A3F42;
+    --texto-secundario: #7F7F40;
+    --texto-terciario: #8C9230;
+    --texto-cuaternario: #5C6E3F;
+
+    --fuente-principal: 'Manrope', sans-serif;
+
+    --espacio-lateral: 55px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 54px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+.swiper {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--texto-principal) !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+
+.swiper-button-prev {
+  left: -60px;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 254, 225, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 51px;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.header button {
+    margin-right: 51px;
+    background-color: #132B35;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 20px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 20%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url('/public/images/header.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: left;
+    align-items:flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    color: white;
+    margin-left: 59px;
+}
+
+.header-title {
+    font-size: 60px;
+    margin-bottom: 73px;
+}
+
+
+.nosotros {
+    display: grid;
+    color: var(--texto-principal);
+    grid-template-columns: 50% 50%;
+    margin-inline: var(--espacio-lateral);
+    gap: clamp(1rem, 2vw, 2rem);
+    align-items: start;
+}
+
+.nosotros h2 {
+    margin-top: 0;
+}
+
+.nosotros-parrafo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ser-parte {
+    position: relative;
+    width: calc(100% - calc(var(--espacio-lateral) * 2));
+    height: 200px;
+    background-image: url('/public/images/ser-parte.png');
+    background-size: cover;
+    margin-inline: var(--espacio-lateral);
+    margin-bottom: 127px;
+    border-radius: 10px;
+}
+
+
+.ser-parte-content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    z-index: 2;
+    padding-inline: 40px;
+    box-sizing: border-box;
+}
+
+.ser-parte-content button {
+        margin-right: 51px;
+        background-color: var(--color-secundario);
+        color: #05393D;
+        border-radius: 10px;
+        border: none;
+        padding: 8px 20px;
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+}
+
+.ser-parte-text h3{
+    margin: 0;
+}
+
+.ser-parte-content h3 {
+    color: var(--color-secundario);
+}
+
+.dato {
+    background-color: var(--color-terciario);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 50% 50%;
+    padding-inline: var(--espacio-lateral);
+}
+
+.dato-title {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.dato-text {
+    font-size: 30px;
+}
+
+.dato img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.colaboradores {
+    display: grid;
+        color: var(--texto-principal);
+        grid-template-columns: 50% 50%;
+        margin-inline: var(--espacio-lateral);
+        gap: clamp(1rem, 2vw, 2rem);
+        align-items: start;
+}
+
+.colaboradores h2 {
+    margin-top: 0;
+}
+
+.colaboradores-parrafo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.testimonios {
+    background-color: #F2F2F2;
+}
+
+.testimonios-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-inline: 179px;
+    padding: 39px;
+    border-radius: 33px;
+}
+
+.testimonios-container img {
+    width: 100%;
+}
+
+.testimonios-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonios-section {
+    margin-right: 51px;
+    border: 2px solid var(--texto-principal);
+    color: var(--texto-principal);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 15px 20px 15px;
+}
+
+.beneficios {
+    padding-inline: var(--espacio-lateral);
+}
+
+.beneficios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.beneficios-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--color-terciario);
+    text-align: center;
+}
+
+.beneficios-card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#card-1 {
+    background-color: rgba(44, 105, 111, 0.2);
+    color: var(--texto-principal);
+}
+
+#card-2 {
+    background-color: rgba(169, 195, 130, 0.2);
+    color: var(--texto-cuaternario);
+}
+
+#card-3 {
+    background-color: rgba(213, 220, 86, 0.2);
+    color: var(--texto-terciario);
+}
+
+.blog {
+    background-color: #F2F2F2;
+    padding-inline: var(--espacio-lateral)
+}
+
+.blog-items {
+    display: flex;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.blog-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 49px;
+}
+
+.unete {
+    display: grid;
+    color: var(--texto-principal);
+    grid-template-columns: 50% 50%;
+    margin-inline: 51px;
+}
+
+.unete button {
+    margin-right: 51px;
+    background-color: var(--texto-principal);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+}
+
+.footer {
+    background-color: var(--texto-principal);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-inline: var(--espacio-lateral);
+    color: white;
+}
+
+.footer ul {
+    list-style: none;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-bottom: 46px;
+}
+
+.footer li {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 16px;
+}
+
+.footer ul p {
+    font-weight: 800;
+}
+
+.footer a {
+    color: white;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 40px;
+    }
+
+    /* SECCIÓN NOSOTROS */
+    .nosotros {
+        grid-template-columns: 1fr;
+        margin-inline: 2rem;
+    }
+    
+    .nosotros h2 {
+        font-size: 40px;
+    }
+
+    /* SECCIÓN DATOS */
+
+    .dato {
+        grid-template-columns: 1fr;
+    }
+
+    /* SECCIÓN COLABORADORES */
+    
+    .colaboradores {
+        grid-template-columns: 1fr;
+        margin-inline: 2rem;
+    }
+    
+    .colaboradores h2 {
+        font-size: 40px;
+    }
+
+    /* SECCIÓN BENEFICIOS */
+    .beneficios-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .beneficios-card {
+        padding: 1.5rem;
+    }
+    
+    .beneficios-card img {
+        width: 70px;
+    }
+                        
+}
+
+@media (max-width: 480px) {
+
+    h2 {
+        font-size: 32px;
+    }
+
+    /* SECCIÓN NOSOTROS */
+
+          .nosotros {
+              margin-inline: 1rem;
+          }
+    
+          .nosotros h2 {
+              font-size: 32px;
+          }
+    
+          .nosotros-parrafo {
+              gap: 0.75rem;
+          }
+
+    /* SECCIÓN COLABORADORES */
+    
+    .colaboradores {
+        margin-inline: 1rem;
+    }
+    
+    .colaboradores h2 {
+        font-size: 32px;
+    }
+    
+    .colaboradores-parrafo {
+        gap: 0.75rem;
+    }
+
+    /* SECCION BENEFICIOS */
+
+          .beneficios-card {
+              padding: 1rem;
+          }
+    
+          .beneficios-card img {
+              width: 60px;
+          }
+}

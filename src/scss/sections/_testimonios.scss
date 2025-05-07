@@ -1,0 +1,115 @@
+@use "../tools/mixin" as *;
+
+.c-testimonios {
+    background-color: #F2F2F2;
+
+    &__container {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: end;
+        padding: 40px;
+        border-radius: 33px;
+        gap: 20px;
+        max-width: 1200px;
+        max-height: auto;
+        margin: 0 auto;
+        position: relative;
+        overflow: visible;
+
+        @include lg() {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 25px;
+        }
+    }
+
+    &__content {
+        display: inline-block;
+
+        @include lg() {
+            gap: 20px;
+        }
+    }
+
+    &__tag {
+        border: 2px solid var(--texto-principal);
+        color: var(--texto-principal);
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px 15px;
+        margin: 0;
+        font-size: 14px;
+
+        @include lg() {
+            margin-right: 0;
+            padding: 15px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+        text-align: start;
+
+        @include lg() {
+            font-size: 20px;
+        }
+    }
+
+    &__author {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    &__role {
+        color: var(--texto-secundario);
+        margin-bottom: 0;
+        p {
+            display: block;
+        }
+
+        @include lg() {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+
+        @include lg() {
+            order: -1;
+        }
+    }
+
+    &__subcontainer {
+        display: grid;
+        grid-template-columns: 18% 80%;
+        gap: 2%;
+
+                @include lg() {
+                    display: inline-block;
+                    text-align: start;
+                    }
+    }
+
+    &__container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        height: 100%;
+        margin: 0;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    p {
+        display: inline-block;
+    }
+} 

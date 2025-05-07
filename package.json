@@ -1,0 +1,25 @@
+{
+  "name": "website-carne-bovina",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.3.2",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.7.8",
+    "sass": "^1.87.0",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.1.4"
+  },
+  "description": "```sh npm create astro@latest -- --template minimal ```",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,109 @@
+---
+import "../styles/variables.css";
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import LogoDark from "../assets/images/logo-dark.svg?url";
+---
+
+<Layout title="Carne Bovina - Región de Los Lagos">
+  <main class="form">
+    <div class="form__container-text">
+      <img src={LogoDark} alt="Logo" width="140" height="140" />
+      <h3>Formulario de inscripción - PTI</h3>
+      <p>
+        Únete al Programa Territorial Integrado (PTI) que Transforma la
+        Ganadería, Impulsa la Calidad y Preserva Nuestras Tradiciones
+      </p>
+    </div>
+    <div class="form__container">
+      <form
+        class="c-form__wrapper-form"
+        name="contact-dyegon"
+        method="POST"
+        action="https://usebasin.com/f/c283ee0aa6d9"
+      >
+        <div class="pt-5">
+          <label for="input-name" class="block text-sm text-primary"
+            >Nombre Completo</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="input-name"
+            class="form-control block mt-2 w-full placeholder-gray-400/70 rounded-lg border px-5 py-2.5 border-gray-600 bg-white text-primary"
+          />
+          <p class="mt-1 text-small text-gray-400" id="help-name">
+            Ingresa tu nombre completo
+          </p>
+        </div>
+
+        <div class="pt-5">
+          <label for="input-phone" class="block text-sm text-primary"
+            >Número Celular</label
+          >
+          <div class="flex items-center mt-2">
+            <p
+              class="py-2.5 px-3 tex-primary bg-white border-gray-700 border border-r-0 rtl:rounded-r-lg rtl:rounded-l-none rtl:border-l-0 rtl:border-r rounded-l-lg"
+            >
+              +
+            </p>
+            <input
+              type="phone"
+              name="phone"
+              id="input-phone"
+              class="form-control block w-full rounded-l-none rtl:rounded-l-lg rtl:rounded-r-none rounded-lg border px-5 py-2.5 text-primary focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-white focus:border-blue-300"
+            />
+          </div>
+          <p class="mt-1 text-small text-gray-400" id="help-phone">
+            Ingresa tu número de celular
+          </p>
+        </div>
+        <div class="pt-5">
+          <label for="input-email" class="block text-sm text-primary"
+            >Email</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="input-email"
+            class="form-control block mt-2 w-full rounded-lg border px-5 py-2.5 focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 border-gray-600 bg-white text-primary focus:border-blue-300"
+          />
+          <p class="mt-1 text-small text-gray-400" id="help-email">
+            Ingresa tu correo electrónico
+          </p>
+        </div>
+        <div class="pt-5">
+          <label for="group" class="block text-sm text-primary">
+            ¿Qué grupo te identifica más?
+          </label>
+          <select
+            name="grupo"
+            id="group"
+            class="mt-1.5 w-full form-select rounded-lg bg-white text-primary sm:text-sm px-5 py-2.5 border border-gray-600"
+          >
+            <option value="">Seleccionar grupo</option>
+            <option value="Productor agricultor">Productor agricultor</option>
+            <option value="Faena">Faena</option>
+            <option value="Carnicería">Carnicería</option>
+            <option value="Horeca">Horeca</option>
+            <option value="Alimentación">Alimentación</option>
+            <option value="Institucional">Institucional</option>
+            <option value="Retail">Retail</option>
+            <option value="Minimarket">Minimarket</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <button
+          disabled
+          type="submit"
+          id="button-send"
+          class="mt-10 text-center block w-full overflow-hidden rounded-lg px-8 py-3 border border-gray-600"
+        >
+          <span class="text-md font-bold"> ENVIAR </span>
+        </button>
+      </form>
+    </div>
+  </main>
+</Layout>
