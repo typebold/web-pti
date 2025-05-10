@@ -4,7 +4,8 @@ import { Image } from "astro:assets";
 import logoWhite from "../assets/images/logo-white.svg?url";
 import flechaWhite from "../assets/images/flecha-white.svg?url";
 import datoImg from "../assets/images/nutricionista.jpg";
-import logoCorfo from "../assets/images/logo-corfo.png";
+import logoCorfo from "../assets/images/logo-corfo.svg?url";
+import logoCorfoWhite from "../assets/images/logo-corfo-white.svg?url";
 import beneficio1 from "../assets/images/beneficio-1.svg?url";
 import beneficio2 from "../assets/images/beneficio-2.svg?url";
 import beneficio3 from "../assets/images/beneficio-3.svg?url";
@@ -91,6 +92,7 @@ import "swiper/swiper-bundle.css";
         </nav>
         <div class="c-header__content">
           <h1 class="c-header__title">Sabor y nutrición que nos une</h1>
+          <img src={logoCorfoWhite} alt="Logo Corfo" class="c-header__corfo" />
         </div>
       </div>
     </header>
@@ -210,7 +212,7 @@ import "swiper/swiper-bundle.css";
           <div class="c-colaboradores__container">
             <div>
               <h2>Colaboradores y Alianzas Estratégicas</h2>
-              <Image
+              <img
                 class="c-colaboradores__logo"
                 src={logoCorfo}
                 alt="Logo Corfo"
@@ -236,6 +238,8 @@ import "swiper/swiper-bundle.css";
           </div>
         </div>
       </section>
+
+      <section></section>
 
       <section class="c-testimonios" id="testimonios">
         <div class="c-testimonios__container">

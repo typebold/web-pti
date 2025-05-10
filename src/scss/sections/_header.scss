@@ -81,8 +81,17 @@
     &__title{
         font-size: 60px;
         color: white;
+        margin-bottom: 40px;
         @include lg(){
             font-size: 40px;
+        }
+    }
+
+    &__corfo {
+        width: 140px;
+        height: auto;
+        @include lg(){
+            width: 120px;
         }
     }
 }
