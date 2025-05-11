@@ -99,16 +99,13 @@ import LogoDark from "../assets/images/logo-dark.svg?url";
           disabled
           type="submit"
           id="button-send"
-          class="mt-10 text-center block w-full overflow-hidden rounded-lg px-8 py-3 border border-gray-600"
+          class="mt-10 text-center block w-full overflow-hidden rounded-lg px-8 py-3 border border-gray-600 bg-white text-primary opacity-50 pointer-events-none cursor-not-allowed transition"
         >
-          <span class="text-md font-bold"> ENVIAR </span>
+          <span class="text-md font-bold">ENVIAR</span>
         </button>
       </form>
     </div>
   </main>
 </Layout>
 
-<script type="module" is:inline>
-  import validarFormulario from "../js/validation-form.js";
-  validarFormulario();
-</script>
+<script src="../js/validation-form.js"></script>
