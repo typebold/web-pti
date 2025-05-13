@@ -72,29 +72,67 @@ import "swiper/swiper-bundle.css";
     </script>
   </head>
   <body>
-    <header class="c-header">
-      <div class="o-container">
-        <nav class="c-header__navbar">
-          <ul>
-            <li><img src={logoWhite} alt="Logo" width="120" height="120" /></li>
-            <li><a href="#ahas">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#blog">Noticias</a></li>
-          </ul>
-          <button
-            onclick="window.open('./form', '_blank')"
-            class="c-header__button"
-          >
-            Quiero ser parte del PTI
-            <img src={flechaWhite} alt="Flecha" width="14" height="14" />
-          </button>
-        </nav>
-        <div class="c-header__content">
-          <h1 class="c-header__title">Sabor y nutrición que nos une</h1>
-          <img src={logoCorfoWhite} alt="Logo Corfo" class="c-header__corfo" />
+    <header>
+      <section class="c-home-new">
+        <div class="c-home-new__wrapper-content">
+          <div class="o-container">
+            <div class="c-home-new__wrapper-nav">
+              <div class="c-home-new__wrapper-nav-inner">
+                <div class="c-home-new__nav-container">
+                  <img
+                    src={logoWhite}
+                    alt="Logo PTI"
+                    class="c-home-new__nav-container-logo"
+                  />
+                  <ul class="c-home-new__nav-container-li">
+                    <li><a href="#about">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#blog">Noticias</a></li>
+                  </ul>
+                </div>
+                <button
+                  class="c-home-new__nav-button"
+                  onclick="window.open('./form', '_blank')"
+                >
+                  Quiero ser parte del PTI
+                  <img src={flechaWhite} alt="Flecha" width="14" height="14" />
+                </button>
+              </div>
+            </div>
+            <div class="c-home-new__title">
+              <div class="">
+                <h1 level={1} color="white" weight="bold">
+                  Sabor y nutrición que nos une
+                </h1>
+                <img
+                  src={logoCorfoWhite}
+                  alt="Logo Corfo"
+                  width="120"
+                  height="120"
+                />
+              </div>
+            </div>
+            <div class="c-home-new__video">
+              <div class="c-home-new__video--width">
+                <div class="c-home-new__video--aspect">
+                  <div class="c-home-new__video--height">
+                    <div class="c-home-new__video--hide-controls">
+                      <iframe
+                        src="https://player.vimeo.com/video/1083732626?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&controls=0&muted=1&dnt=1"
+                        data-cookieconsent="necessary"
+                        frameborder="0"
+                        allow="autoplay"
+                        allowfullscreen=""
+                        style="display: block;"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </header>
 
     <main>
@@ -648,6 +686,43 @@ import "swiper/swiper-bundle.css";
           </div>
         </div>
       </section>
+
+      <script>
+        // Obtén las referencias a los elementos de video
+        var videoBgAspect = document.querySelector(
+          ".c-home-new__video--aspect"
+        );
+        var videoBgWidth = document.querySelector(".c-home-new__video--width");
+        var videoAspect =
+          videoBgAspect.offsetHeight / videoBgAspect.offsetWidth;
+
+        // Declarar la variable para el ID del temporizador
+        var timeoutId;
+
+        // Función para ajustar el tamaño del video de fondo
+        function videobgEnlarge() {
+          // console.log('resize');
+          var windowAspect = window.innerHeight / window.innerWidth;
+          if (windowAspect > videoAspect) {
+            videoBgWidth.style.width = (windowAspect / videoAspect) * 100 + "%";
+          } else {
+            videoBgWidth.style.width = "100%";
+          }
+        }
+
+        // Agregar un evento de redimensionamiento de ventana
+        window.addEventListener("resize", function () {
+          if (timeoutId) {
+            clearTimeout(timeoutId);
+          }
+          timeoutId = setTimeout(videobgEnlarge, 100);
+        });
+
+        // Ejecutar videobgEnlarge al cargar la página
+        window.addEventListener("DOMContentLoaded", function () {
+          videobgEnlarge();
+        });
+      </script>
     </main>
 
     <section class="c-unete">

@@ -1,97 +1,162 @@
 @use "../tools/mixin" as *;
 
-.c-header{
-    position: relative;
-    width: 100%;
-    min-height: 80vh;
-    background-image: linear-gradient(-90deg, rgba(19, 40, 53, 0) 0%, rgba(19, 40, 53, 0.5) 100%), url('../assets/images/header.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: end;
-    &__navbar{
-        position: absolute;
-        top: 0;
-        left: 0;
+.c-home-new {
+    height: 90vh;
+
+    @include md() {
+        height: 85vh;
+    }
+
+    &__wrapper-content {
         width: 100%;
-        // background-color: rgba(255, 254, 225, 0.15);
-        // backdrop-filter: blur(5px);
-        padding: 5px 0;
+        min-height: 100%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__wrapper-nav {
+        padding-top: 30px;
+        position: absolute;
+        width: 95%;
+        z-index: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include lg(){
-            flex-direction: column;
-            align-items: start;
-            justify-content: space-between;
-            padding: 10px 0;
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            padding-left: 51px;
-            @include lg(){
-                padding-left: 0px;
+            @include lg() {
                 flex-direction: column;
-                align-items: start;
+                align-items: flex-start;
             }
+        &-inner{
+            display: flex;
+             justify-content: space-between;
+             align-items: center;
+             width: 100%;
+             @include lg() {
+                align-items: start;
+                width: 95%;
+             }
         }
-        li {
-            margin: 0 20px;
-        }
-        a {
+    }
+
+          &__nav-container {
+              display: flex;
+              align-items: center;
+              gap: 40px;
+
+              @include lg() {
+                flex-direction: column;
+                gap: 20px;
+              }
+              &-logo{
+                width: 120px;
+                height: auto;
+                @include lg() {
+                    width: 100px;
+                }
+              }
+
+              &-li {
+                display: flex;
+                align-items: start;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 40px;
+
+                @include lg() {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                li a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+              }
+          }
+          &__nav-button {
+            background-color: #132b35;
             color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            padding: 15px 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             cursor: pointer;
-        }
-    }
+            transition: all 0.3s ease;
+            z-index: 1;
+          }
 
-    &__logo{
-        width: 80px;
-        height: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    &__button{
-        margin-right: 51px;
-        background-color: #132B35;
+    &__title {
+        text-align: left;
         color: white;
-        border-radius: 10px;
-        border: none;
-        padding: 15px 30px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        @include lg(){
-            margin-left: 15px;
-        }
-    }
-    &__content{
-        width: 60%;
-        margin-bottom: 50px;
-        @include lg(){
+        position: absolute;
+        width: 100%;
+        top: 70%;
+        z-index: 2;
+
+        @include md() {
             width: 90%;
-        }
-    }
-    &__title{
-        font-size: 60px;
-        color: white;
-        margin-bottom: 40px;
-        @include lg(){
-            font-size: 40px;
+            left: 5%;
+            top: 60%;
         }
     }
 
-    &__corfo {
-        width: 140px;
-        height: auto;
-        @include lg(){
-            width: 120px;
+    &__video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+
+        &--width {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+        }
+
+        &--aspect {
+            position: absolute;
+            width: 100%;
+            height: 0;
+            top: -9999px;
+            bottom: -9999px;
+            margin: auto;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+        }
+
+        &--height {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        &--hide-controls {
+            box-sizing: content-box;
+            position: relative;
+            height: 100%;
         }
     }
 }
