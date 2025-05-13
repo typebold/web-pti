@@ -99,10 +99,13 @@
         top: 70%;
         z-index: 2;
 
-        @include md() {
+        @include lg() {
             width: 90%;
             left: 5%;
-            top: 50%;
+            top: 60%;
+                    h1 {
+                            font-size: 40px;
+                        }
 
         }
     }
