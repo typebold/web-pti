@@ -49,6 +49,7 @@
         @include lg() {
             text-align: left;
             max-width: 100%;
+            min-width: 100%;
         }
     }
 
